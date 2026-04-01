@@ -1,0 +1,6 @@
+node_modules/
+client/node_modules/
+crm.db
+*.db-shm
+*.db-wal
+.env

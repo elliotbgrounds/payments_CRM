@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  color: #2C2C2C;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #CACACA;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B3B3B3;
+}
+
+/* Inline edit */
+.inline-edit-value {
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin: -1px -4px;
+  transition: background 0.1s;
+}
+.inline-edit-value:hover {
+  background: rgba(20, 115, 230, 0.08);
+}
+
+/* Focus ring */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(20, 115, 230, 0.4);
+}
+
+.tab-btn {
+  transition: color 0.1s, border-color 0.1s;
+}
+
+.table-row-hover:hover {
+  background: #F0F7FF;
+}
