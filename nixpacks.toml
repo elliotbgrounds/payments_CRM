@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "python3", "pkg-config", "gcc"]
+
+[phases.install]
+cmds = ["npm ci --ignore-scripts", "cd client && npm ci"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm start"
