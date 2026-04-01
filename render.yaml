@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: payments-crm
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_PATH
+        value: /data/crm.db
+      - key: JWT_SECRET
+        generateValue: true
+    disk:
+      name: crm-data
+      mountPath: /data
+      sizeGB: 1
