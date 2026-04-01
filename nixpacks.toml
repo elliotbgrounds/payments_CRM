@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs_22", "python3", "pkg-config", "gcc"]
 
 [phases.install]
-cmds = ["npm ci --ignore-scripts", "cd client && npm ci"]
+cmds = ["npm ci", "cd client && npm ci"]
 
 [phases.build]
 cmds = ["npm run build"]
