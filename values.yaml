@@ -1,0 +1,39 @@
+# values.yaml
+
+vaultSecrets:
+  # ... (elided for brevity)
+
+  # a test of a build secret
+  newbuildvar: ethos/myservice/flex/newbuildvar
+
+ethos-k8s-helm-templates:
+  ethos-vault-secrets-operator:
+    enabled: true
+  deployment:
+    containers:
+      cont1:
+        ...
+        envVars:
+          nonSecrets: {}
+          secrets:
+            FOO:
+              secretRefPath: "myteam/myservice/runtime/dev/foo"
+              field: "token"
+            # Next two variables use two fields from same Vault path
+            DB_USER:
+              secretRefPath: "myteam/myservice/runtime/dev/mydb"
+              field: "username"
+            DB_PASSWORD:
+              secretRefPath: "myteam/myservice/runtime/dev/mydb"
+              field: "password"
+            # Existing configuration in the repo (uses external secret store)
+            TEST_SECRET:
+              secretStoreRef: "common-credentials"
+              secretRefPath: "vault/secret/test-secret"
+              field: "Password"
+            ...
+            # Configuration to use an existing Kubernetes Secret
+            KUBERNETES_SECRET:
+              k8sSecret:
+                name: "service-rediskeys" # This is an existing k8s secret in the namespace.
+                field: "primaryKey"

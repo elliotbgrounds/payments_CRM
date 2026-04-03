@@ -1,0 +1,8 @@
+serviceMainGitBranch: main
+
+appRepo: git.corp.adobe.com/ebartlett/Payments_CRM
+
+environments:
+  - name: Stage
+    region: or2
+    path: k8s/helm/Stage/or2

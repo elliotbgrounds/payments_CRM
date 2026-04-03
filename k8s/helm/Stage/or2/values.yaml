@@ -1,0 +1,20 @@
+replicaCount: 1
+
+image:
+  repository: docker-vault-pen-release.dr.corp.adobe.com/payments-crm
+  tag: latest
+  pullPolicy: Always
+
+service:
+  name: payments-crm
+  namespace: payments-projects
+  port: 3001
+
+persistence:
+  size: 1Gi
+  mountPath: /app
+
+accessLevel: internal
+
+vaultSecrets:
+  newbuildvar: ethos/myservice/flex/newbuildvar

@@ -1,7 +1,6 @@
 .idea/*
 !.idea/externalDependencies.xml
 
-**/sym_values
 **/Chart.lock
 **/**/Chart.lock
 k8s/**/charts

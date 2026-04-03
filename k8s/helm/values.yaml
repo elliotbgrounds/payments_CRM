@@ -1,0 +1,4 @@
+# Global helm values
+service:
+  name: payments-crm
+  namespace: payments-projects

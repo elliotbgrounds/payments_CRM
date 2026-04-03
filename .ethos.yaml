@@ -1,0 +1,9 @@
+service:
+  name: payments-crm
+  namespace: payments-projects
+
+gitops_config:
+  - environment: Stage
+    region: or2
+    cluster: ethos999-stage-or2
+    access_level: internal

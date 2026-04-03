@@ -1,0 +1,21 @@
+node_modules/
+client/node_modules/
+client/dist/
+
+*.db
+*.db-shm
+*.db-wal
+
+.git/
+.gitignore
+.idea/
+.vscode/
+
+data/
+Excel Files/
+
+.env
+.env.local
+
+README.md
+*.sh

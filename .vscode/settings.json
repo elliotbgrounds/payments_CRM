@@ -1,0 +1,11 @@
+{
+  "yaml.schemas": {
+    "/Users/ebartlett/Library/CloudStorage/OneDrive-Adobe/Payments Team/Claude Projects/caas.next-provisioner/provisioner-core/src/main/resources/specfile.schema.json": ["/.ethos.yaml"]
+  },
+  "helm-intellisense.customValueFileNames": [
+    "values.yaml",
+    "../values.yaml",
+    "../../values.yaml"
+  ],
+  "helm-intellisense.lintFileOnSave": true
+}
